@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: #fafafa;
+}
+
+.place-wrap {
+	margin: 20px;
+}
+
+.anchor, .anchor:visited {
+	color: #2962FF;
+	text-decoration: none;
+}
+
+.anchor:hover, .anchor:active {
+	text-decoration: underline;
+}
+
+/* Progress bar END animation
+.scale-up-ver-bottom {
+	animation: scale-up-ver-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.2s both;
+} */
+@keyframes scale-up-ver-bottom {
+  0% {
+            transform: scaleY(1);
+            transform-origin: 0% 100%;
+  }
+  100% {
+            transform: scaleY(0);
+            transform-origin: 0% 100%;
+  }
+}
