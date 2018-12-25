@@ -134,7 +134,7 @@ class PoolBanner extends Component {
     const { classes } = this.props;
     return (
       <React.Fragment>
-        <Typography variant="title" color="inherit" className={classes.title}>
+        <Typography variant="title" color="inherit" className={classes.title} headlineMapping={{title: 'h1'}}>
           Website Launch Checklist
         </Typography>
         <div className={classes.fieldWrap}>

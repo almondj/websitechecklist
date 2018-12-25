@@ -63,8 +63,6 @@ const styles = theme => ({
     borderColor: purple[500]
   },
   button: {
-    paddingLeft: theme.spacing.unit * 1.5,
-    paddingRight: theme.spacing.unit * 2,
     marginRight: theme.spacing.unit * 2
   },
   // Link style, there seems to be nothing in material ui library for links
