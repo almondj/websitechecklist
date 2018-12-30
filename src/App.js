@@ -16,6 +16,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import grey from "@material-ui/core/colors/grey";
 
 // Custom styling for components
 const styles = theme => ({
@@ -52,6 +53,11 @@ const styles = theme => ({
     [theme.breakpoints.only("xs")]: {
       top: "52px"
     }
+  },
+  footer: {
+    margin: theme.spacing.unit * 4 + 'px ' + theme.spacing.unit * 3 + 'px',
+    textAlign: 'center',
+    color: grey[900],
   }
 });
 
@@ -218,6 +224,9 @@ class AutoGrid extends React.Component {
             />
           </Grid>
         </div>
+        <footer className={classes.footer}>
+          <p>React built in 2018. Questions or comments? Please <a className="anchor" href="mailto:feedback@websitelaunchchecklist.net" target="_blank">send your feedback!</a></p>
+        </footer>
       </React.Fragment>
     );
   }
