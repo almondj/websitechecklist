@@ -74,7 +74,14 @@ const styles = theme => ({
         width: 230
       }
     }
-  }
+  },
+  logoLink: {
+    color: 'white',
+    textDecoration: 'none',
+    "&:hover, &:active": {
+      textDecoration: 'underline',
+    },
+  },
 });
 
 class PoolBanner extends Component {
@@ -135,7 +142,7 @@ class PoolBanner extends Component {
     return (
       <React.Fragment>
         <Typography variant="title" color="inherit" className={classes.title} headlineMapping={{title: 'h1'}}>
-          Website Launch Checklist
+          <a href="../" className={classes.logoLink}>Website Launch Checklist</a>
         </Typography>
         <div className={classes.fieldWrap}>
           <IconButton

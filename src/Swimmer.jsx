@@ -208,6 +208,7 @@ class Swimmer extends Component {
                 color="inherit"
                 className={classes.button}
                 aria-label="Delete"
+                title="Delete"
                 onClick={e => this.handleRemove(e)}
               >
                 <Delete
