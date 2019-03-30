@@ -12,6 +12,7 @@
 /public/fetch.php
 /public/index.php
 /public/update.php
+/public/manual-update.php
 
 # misc
 .DS_Store
