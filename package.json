@@ -10,7 +10,8 @@
     "merge": "^1.2.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "typeface-roboto": "0.0.54"
+    "typeface-roboto": "0.0.54",
+    "handlebars": ">=4.0.14"
   },
   "devDependencies": {
     "react-scripts": "1.1.5",
