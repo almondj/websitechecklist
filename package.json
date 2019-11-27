@@ -1,33 +1,42 @@
 {
   "name": "websitechecklist",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://www.websitelaunchchecklist.net/check/",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.1.0",
-    "@material-ui/icons": "^3.0.1",
+    "@material-ui/core": "^4.0.0",
+    "@material-ui/icons": "^4.0.0",
     "axios": "^0.19.0",
-    "eslint": ">=4.18.2",
+    "braces": ">=2.3.1",
+    "handlebars": "^4.5.3",
+    "js-yaml": ">=3.13.1",
     "lodash": ">=4.17.13",
     "mem": ">=4.0.0",
     "merge": "^1.2.1",
-    "react": "^16.5.2",
+    "react": "^16.8.0",
     "react-dom": "^16.5.2",
-    "typeface-roboto": "0.0.54",
-    "handlebars": ">=4.0.14",
-    "js-yaml": ">=3.13.1",
-    "braces": ">=2.3.1"
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
-    "react-scripts": "1.1.5",
-    "webpack-dev-server": "^3.1.14",
     "mem": ">=4.0.0",
-    "eslint": ">=4.18.2"
+    "react-scripts": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

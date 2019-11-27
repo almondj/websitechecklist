@@ -14,13 +14,13 @@ const styles = theme => ({
     [theme.breakpoints.up("lg")]: {
       flexBasis: 0,
       flexGrow: 1,
-      marginRight: theme.spacing.unit * 3
+      marginRight: theme.spacing(3)
     },
     [theme.breakpoints.down("md")]: {
       whiteSpace: "nowrap",
       overflowX: "scroll",
       width: "100%",
-      padding: theme.spacing.unit * 2
+      padding: theme.spacing(2)
     }
   },
   [theme.breakpoints.up("lg")]: {

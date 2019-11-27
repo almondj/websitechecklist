@@ -24,22 +24,22 @@ import purple from "@material-ui/core/colors/purple";
 
 const styles = theme => ({
   paper: {
-    padding: theme.spacing.unit * 2,
-    color: theme.palette.text.secondary,
+    padding: theme.spacing(2),
+    color: theme.palette.text.textSecondary,
     borderTop: "3px solid transparent",
     display: "inline-block",
-    width: "calc(100vw - " + theme.spacing.unit * 5 + "px)",
+    width: "calc(100vw - " + theme.spacing(5) + "px)",
     maxWidth: "360px",
     verticalAlign: "top",
     whiteSpace: "normal",
-    marginRight: theme.spacing.unit * 2,
+    marginRight: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
       maxWidth: "280px"
     },
     [theme.breakpoints.up("lg")]: {
       width: "100%",
       maxWidth: "none",
-      marginBottom: theme.spacing.unit * 2,
+      marginBottom: theme.spacing(2),
       marginRight: "0px"
     }
   },
@@ -63,7 +63,7 @@ const styles = theme => ({
     borderColor: purple[500]
   },
   button: {
-    marginRight: theme.spacing.unit * 2
+    marginRight: theme.spacing(2)
   },
   // Link style, there seems to be nothing in material ui library for links
   anchor: {

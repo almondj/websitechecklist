@@ -16,7 +16,7 @@ const styles = theme => ({
 class Error extends Component {
 
 	render() {
-		const { classes } = this.props;
+		/*const { classes } = this.props;*/
 		return (
 			<React.Fragment>
 				<Dialog

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Error from "./Error.jsx";
+//import Error from "./Error.jsx";
 
 // Material UI Items
 import PropTypes from "prop-types";
@@ -20,7 +20,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 const styles = theme => ({
   // Center the title visually
   title: {
-    lineHeight: theme.spacing.unit * 7 + "px"
+    lineHeight: theme.spacing(7) + "px"
   },
   fieldWrap: {
     [theme.breakpoints.up("sm")]: {
@@ -37,19 +37,19 @@ const styles = theme => ({
   },
   urlIcon: {
     [theme.breakpoints.up("sm")]: {
-      lineHeight: theme.spacing.unit * 7 + "px",
+      lineHeight: theme.spacing(7) + "px",
       padding: 0,
       height: "100%",
       position: "absolute",
       top: "2px",
-      left: theme.spacing.unit * 2 + "px",
+      left: theme.spacing(2) + "px",
       pointerEvents: "none",
       display: "flex",
       alignItems: "center",
       justifyContent: "center"
     },
     [theme.breakpoints.only("xs")]: {
-      padding: theme.spacing.unit
+      padding: theme.spacing + "px"
     }
   },
   inputRoot: {
@@ -64,10 +64,10 @@ const styles = theme => ({
     display: "none",
     [theme.breakpoints.up("sm")]: {
       display: "block",
-      paddingTop: theme.spacing.unit,
-      paddingRight: theme.spacing.unit,
-      paddingBottom: theme.spacing.unit,
-      paddingLeft: theme.spacing.unit * 7,
+      paddingTop: theme.spacing + "px",
+      paddingRight: theme.spacing + "px",
+      paddingBottom: theme.spacing + "px",
+      paddingLeft: theme.spacing(7) + "px",
       transition: theme.transitions.create("width"),
       width: "auto",
       "&:focus": {
@@ -141,7 +141,7 @@ class PoolBanner extends Component {
     const { classes } = this.props;
     return (
       <React.Fragment>
-        <Typography variant="title" color="inherit" className={classes.title} headlineMapping={{title: 'h1'}}>
+        <Typography variant="h6" color="inherit" className={classes.title} variantMapping={{title: 'h1'}}>
           <a href="../" className={classes.logoLink}>Website Launch Checklist</a>
         </Typography>
         <div className={classes.fieldWrap}>

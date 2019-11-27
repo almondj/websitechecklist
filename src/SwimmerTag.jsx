@@ -13,7 +13,7 @@ import Save from "@material-ui/icons/Save";
 const styles = theme => ({
 	noteField: {
 		display: "block",
-		marginBottom: theme.spacing.unit * 2
+		marginBottom: theme.spacing(2)
 	}
 });
 

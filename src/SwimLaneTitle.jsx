@@ -25,7 +25,7 @@ const styles = theme => ({
 		left: 0,
 		marginTop: 0,
 		[theme.breakpoints.up("sm")]: {
-			marginTop: theme.spacing.unit * 4 + "px"
+			marginTop: theme.spacing(4) + "px"
 		}
 	},
 	iconRed: {

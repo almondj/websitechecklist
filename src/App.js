@@ -27,8 +27,8 @@ const styles = theme => ({
     marginRight: 0,
     [theme.breakpoints.up("lg")]: {
       flexWrap: "nowrap",
-      paddingLeft: theme.spacing.unit * 3,
-      paddingRight: theme.spacing.unit * 3
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3)
     }
   },
   root: {
@@ -55,7 +55,7 @@ const styles = theme => ({
     }
   },
   footer: {
-    margin: theme.spacing.unit * 4 + 'px ' + theme.spacing.unit * 3 + 'px',
+    margin: theme.spacing(4) + 'px ' + theme.spacing(3) + 'px',
     textAlign: 'center',
     color: grey[900],
   }
@@ -82,7 +82,19 @@ class AutoGrid extends React.Component {
   // Gathering the data to be used,
   // IF the existingProject is set: load from server
   // ELSE: local data is used (no DB calls, for speed)
-  componentWillMount() {
+  componentDidMount() {
+
+    // Managing the load animation status
+    // Circular progress animation will disappear after 2 seconds
+    setTimeout(
+      () =>
+        this.setState(
+          { loading: false },
+          document.getElementById("root").focus()
+        ),
+      2000
+    );
+
     if (window.existingProject === true) {
       // Set in PHP for speed
       console.log("existing project");
@@ -104,19 +116,6 @@ class AutoGrid extends React.Component {
         swimmers: jsondata
       });
     }
-  }
-
-  componentDidMount() {
-    // Managing the load animation status
-    // Circular progress animation will disappear after 2 seconds
-    setTimeout(
-      () =>
-        this.setState(
-          { loading: false },
-          document.getElementById("root").focus()
-        ),
-      2000
-    );
   }
 
   // Handle determinate progress bar
@@ -215,7 +214,7 @@ class AutoGrid extends React.Component {
           ""
         )}
         <div className={classes.root}>
-          <Grid container spacing={24} className={classes.appBarShift}>
+          <Grid container spacing={3} className={classes.appBarShift}>
             <Swimlanes
               swimmers={this.state.swimmers}
               progress={this.progress}
@@ -225,7 +224,7 @@ class AutoGrid extends React.Component {
           </Grid>
         </div>
         <footer className={classes.footer}>
-          <p>React built in 2018. Questions or comments? Please <a className="anchor" href="mailto:feedback@websitelaunchchecklist.net" target="_blank">send your feedback!</a></p>
+          <p>React built in 2018. Questions or comments? Please <a className="anchor" href="mailto:feedback@websitelaunchchecklist.net" target="_blank" rel="noopener noreferrer">send your feedback!</a></p>
         </footer>
       </React.Fragment>
     );
