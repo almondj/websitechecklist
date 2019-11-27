@@ -103,6 +103,7 @@ class SwimmerTag extends Component {
 					value={this.state.note}
 					className={classes.noteField}
 					fullWidth
+					variant="outlined"
 					InputProps={{
 						maxLength: "500",
 						"aria-label": "Notes",

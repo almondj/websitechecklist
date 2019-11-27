@@ -49,7 +49,7 @@ const styles = theme => ({
       justifyContent: "center"
     },
     [theme.breakpoints.only("xs")]: {
-      padding: theme.spacing + "px"
+      padding: theme.spacing(1) + "px"
     }
   },
   inputRoot: {
@@ -64,9 +64,9 @@ const styles = theme => ({
     display: "none",
     [theme.breakpoints.up("sm")]: {
       display: "block",
-      paddingTop: theme.spacing + "px",
-      paddingRight: theme.spacing + "px",
-      paddingBottom: theme.spacing + "px",
+      paddingTop: theme.spacing(1) + "px",
+      paddingRight: theme.spacing(1) + "px",
+      paddingBottom: theme.spacing(1) + "px",
       paddingLeft: theme.spacing(7) + "px",
       transition: theme.transitions.create("width"),
       width: "auto",
@@ -178,7 +178,6 @@ class PoolBanner extends Component {
           <DialogContent>
             <TextField
               autoFocus
-              margin="dense"
               id="name"
               label="Website URL"
               onChange={e => this.handleUrl(e.target.value)}
@@ -187,6 +186,7 @@ class PoolBanner extends Component {
               placeholder="http://"
               fullWidth
               ref={this.textInput}
+              variant="outlined"
             />
           </DialogContent>
           <DialogActions>
