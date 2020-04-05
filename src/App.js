@@ -224,7 +224,7 @@ class AutoGrid extends React.Component {
           </Grid>
         </div>
         <footer className={classes.footer}>
-          <p>React built in 2018. Questions or comments? Please <a className="anchor" href="mailto:feedback@websitelaunchchecklist.net" target="_blank" rel="noopener noreferrer">send your feedback!</a></p>
+          <p>React built in 2020. Questions or comments? Please <a className="anchor" href="mailto:feedback@websitelaunchchecklist.net" target="_blank" rel="noopener noreferrer">send your feedback!</a></p>
         </footer>
       </React.Fragment>
     );
