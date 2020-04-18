@@ -8,7 +8,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { fade } from "@material-ui/core/styles/colorManipulator";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import InsertLink from "@material-ui/icons/InsertLink";
+import Label from "@material-ui/icons/Label";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import InputBase from "@material-ui/core/InputBase";
@@ -149,10 +149,10 @@ class PoolBanner extends Component {
             color="inherit"
             className={classes.urlIcon}
             onClick={this.handleClickOpen}
-            aria-label="Website URL"
+            aria-label="Project Name"
             id="urlIcon"
           >
-            <InsertLink />
+            <Label />
           </IconButton>
           <InputBase
             margin="dense"
@@ -160,9 +160,8 @@ class PoolBanner extends Component {
             onChange={e => this.handleUrl(e.target.value)}
             onBlur={e => this.handleSave(e.target.value)}
             value={this.state.url}
-            type="url"
+            type="text"
             inputProps={{ "aria-labelledby": "urlIcon", maxLength: "500" }}
-            placeholder="http://"
             classes={{
               root: classes.inputRoot,
               input: classes.inputInput

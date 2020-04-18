@@ -47,6 +47,12 @@ const styles = theme => ({
   completed: {
     backgroundColor: grey[200],
   },
+  default: {
+    display: "block"
+  },
+  hidden: {
+    display: "none"
+  },
   borderRed: {
     borderColor: red[500]
   },
@@ -69,13 +75,6 @@ const styles = theme => ({
   anchor: {
     color: blue[500],
     fontWeight: "medium"
-  }
-});
-
-// Specific to swimmer title to match material design specs
-const titleWeight = createMuiTheme({
-  typography: {
-    fontSize: 16
   }
 });
 
@@ -172,13 +171,15 @@ class Swimmer extends Component {
               this.state.category,
               classes);
     let buttonText = "Complete";
+    let descriptionState = classes.default;
 
     // Swimmer completed, adjust look
     if (this.state.completed.toLowerCase() === "true") {
-      title = <s>{title}</s>;
+      /*title = <s>{title}</s>;*/
       buttonStyle = "default";
       bgColor = classes.completed;
       buttonText = "Completed";
+      descriptionState = classes.hidden;
     }
 
     if (this.state.visible.toLowerCase() === "true") {
@@ -187,17 +188,22 @@ class Swimmer extends Component {
           <Paper
             className={`${classes.paper} ${bgColor}`}
           >
-            <MuiThemeProvider theme={titleWeight}>
-              <Typography>{title}</Typography>
-            </MuiThemeProvider>
-            <p dangerouslySetInnerHTML={createMarkup(this.state.description)} />
-            <SwimmerTag
-              hash={this.state.hash}
-              swimmer={this.state.swimmer}
-              value={this.state.note}
-              progress={this.props.progress}
-              error={this.props.error}
+            <Typography paragraph={true}>{title}</Typography>
+            <Typography
+              paragraph={true}
+              variant="body2"
+              className={descriptionState} 
+              dangerouslySetInnerHTML={createMarkup(this.state.description)} 
             />
+            <div className={descriptionState}>
+              <SwimmerTag
+                hash={this.state.hash}
+                swimmer={this.state.swimmer}
+                value={this.state.note}
+                progress={this.props.progress}
+                error={this.props.error}
+              />
+            </div>
             <Grid
               container
               direction="row"

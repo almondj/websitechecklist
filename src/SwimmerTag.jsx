@@ -43,6 +43,7 @@ class SwimmerTag extends Component {
 			note: this.props.value,
 			swimmer: this.props.swimmer,
 			hash: this.props.hash,
+			completed: this.props.completeVal,
 			active: false
 		};
 	}

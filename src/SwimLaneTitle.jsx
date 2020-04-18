@@ -5,9 +5,11 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import AccessibilityNew from "@material-ui/icons/AccessibilityNew";
 import Build from "@material-ui/icons/Build";
+import Button from '@material-ui/core/Button';
 import Search from "@material-ui/icons/Search";
 import Lock from "@material-ui/icons/Lock";
 import InvertColors from "@material-ui/icons/InvertColors";
+import Paper from '@material-ui/core/Paper';
 import red from "@material-ui/core/colors/red";
 import green from "@material-ui/core/colors/green";
 import blue from "@material-ui/core/colors/blue";
@@ -26,6 +28,23 @@ const styles = theme => ({
 		marginTop: 0,
 		[theme.breakpoints.up("sm")]: {
 			marginTop: theme.spacing(4) + "px"
+		}
+	},
+	catPaper: {
+		padding: theme.spacing(1) + "px",
+		textAlign: "center",
+		marginRight: theme.spacing(2),
+		display: "inline-block",
+		[theme.breakpoints.up("lg")]: {
+			display: "block",
+			marginBottom: theme.spacing(2) + "px",
+			marginRight: 0
+		}
+	},
+	catButton: {
+		height: "210px",
+		[theme.breakpoints.up("lg")]: {
+			height: "auto"
 		}
 	},
 	iconRed: {
@@ -59,6 +78,9 @@ class SwimLaneTitle extends Component {
 					{titleIcon(this.props.category, classes)}{" "}{/* space inserted by prettier */}
 					{this.props.category}
 				</p>
+				<Paper className={classes.catPaper} variant="outlined">
+					<Button className={classes.catButton} color="primary">Add To-Do</Button>
+				</Paper>
 			</React.Fragment>
 		);
 	}
