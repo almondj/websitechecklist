@@ -78,9 +78,10 @@ class SwimLaneTitle extends Component {
 					{titleIcon(this.props.category, classes)}{" "}{/* space inserted by prettier */}
 					{this.props.category}
 				</p>
-				<Paper className={classes.catPaper} variant="outlined">
+				{/* <Paper className={classes.catPaper} variant="outlined">
 					<Button className={classes.catButton} color="primary">Add To-Do</Button>
-				</Paper>
+					you click this and it does an update.php insert thing; then the swimlanes re-render?
+				</Paper> */}
 			</React.Fragment>
 		);
 	}

@@ -195,15 +195,17 @@ class Swimmer extends Component {
               className={descriptionState} 
               dangerouslySetInnerHTML={createMarkup(this.state.description)} 
             />
-            <div className={descriptionState}>
-              <SwimmerTag
-                hash={this.state.hash}
-                swimmer={this.state.swimmer}
-                value={this.state.note}
-                progress={this.props.progress}
-                error={this.props.error}
-              />
-            </div>
+              {this.state.completed === "false" ? (
+                <SwimmerTag
+                  hash={this.state.hash}
+                  swimmer={this.state.swimmer}
+                  value={this.state.note}
+                  progress={this.props.progress}
+                  error={this.props.error}
+                />
+              ) : (
+                ""
+              )}
             <Grid
               container
               direction="row"
